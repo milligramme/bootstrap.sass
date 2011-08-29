@@ -19,7 +19,7 @@
   // gradient is applied to it's own element because overflow visible is not honored by ie when filter is present
   .fill {
     background:#222;
-    #gradient > .vertical(#333, #222);
+    @include gradient-vertical(#333, #222);
     @shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
     .box-shadow(@shadow);
   }
@@ -63,7 +63,7 @@
     input {
       background-color: #444;
       background-color: rgba(255,255,255,.3);
-      #font > .sans-serif(13px, normal, 1);
+      @include font-sans-serif(13px, normal, 1);
       width: 220px;
       padding: 4px 9px;
       color: #fff;
@@ -297,7 +297,7 @@ footer {
   // Button Base
   cursor: pointer;
   display: inline-block;
-  #gradient > .vertical-three-colors(#fff, #fff, 0.25, darken(#fff, 10%));
+  @include gradient-vertical-three-colors(#fff, #fff, 0.25, darken(#fff, 10%));
   padding: 5px 14px 6px;
   text-shadow: 0 1px 1px rgba(255,255,255,.75);
   color: #333;
