@@ -3,12 +3,13 @@
  * Basic and global styles for generating a grid system, structural layout, and page templates
  * ------------------------------------------------------------------------------------------- */
 
+@import "preboot"
 
 // GRID SYSTEM
 // -----------
 
 .row 
-   @include clearfix()
+   @include clearfix
    margin-left: -20px
 
    // Default columns
@@ -212,5 +213,30 @@ button.btn, input[type=submit].btn
    &::-moz-focus-inner 
       padding: 0
       border: 0
-  
+
+// Shared colors for buttons and alerts
+.btn, .alert-message    
+   // Set text color
+   &.danger,
+   &.danger:hover,
+   &.error,
+   &.error:hover,
+   &.success,
+   &.success:hover,
+   &.info,
+   &.info:hover    
+      color: $white
+
+   // Danger and error appear as red
+   &.danger,
+   &.error    
+      @include gradientBar(#ee5f5b, #c43c35)   
+
+   // Success appears as green
+   &.success    
+      @include gradientBar(#62c462, #57a957)   
+
+   // Info appears as a neutral blue
+   &.info    
+      @include gradientBar(#5bc0de, #339bb9)
 

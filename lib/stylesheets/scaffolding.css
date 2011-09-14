@@ -1,88 +1,257 @@
-/*
-Syntax error: Undefined mixin 'clearfix'.
-        on line 11 of /Users/brendan/Documents/GithubRepos/bootstrap.sass/lib/sass/scaffolding.sass, in `clearfix'
-        from line 11 of /Users/brendan/Documents/GithubRepos/bootstrap.sass/lib/sass/scaffolding.sass
+/* Scaffolding
+ * Basic and global styles for generating a grid system, structural layout, and page templates
+ * ------------------------------------------------------------------------------------------- */
+/* Preboot.sass
+ * Variables and mixins to pre-ignite any new web development project
+ * ------------------------------------------------------------------ */
+.row {
+  zoom: 1;
+  margin-left: -20px; }
+  .row:before, .row:after {
+    display: table;
+    content: ""; }
+  .row:after {
+    clear: both; }
+  .row .span1, .row .span2, .row .span3, .row .span4, .row .span5, .row .span6, .row .span7, .row .span8, .row .span9, .row .span10, .row .span11, .row .span12, .row .span13, .row .span14, .row .span15, .row .span16 {
+    display: inline;
+    float: left;
+    margin-left: 20px; }
+  .row .span1 {
+    width: 40px; }
+  .row .span2 {
+    width: 100px; }
+  .row .span3 {
+    width: 160px; }
+  .row .span4 {
+    width: 220px; }
+  .row .span5 {
+    width: 280px; }
+  .row .span6 {
+    width: 340px; }
+  .row .span7 {
+    width: 400px; }
+  .row .span8 {
+    width: 460px; }
+  .row .span9 {
+    width: 520px; }
+  .row .span10 {
+    width: 580px; }
+  .row .span11 {
+    width: 640px; }
+  .row .span12 {
+    width: 700px; }
+  .row .span13 {
+    width: 760px; }
+  .row .span14 {
+    width: 820px; }
+  .row .span15 {
+    width: 880px; }
+  .row .span16 {
+    width: 940px; }
+  .row .offset1 {
+    margin-left: 80px; }
+  .row .offset2 {
+    margin-left: 140px; }
+  .row .offset3 {
+    margin-left: 200px; }
+  .row .offset4 {
+    margin-left: 260px; }
+  .row .offset5 {
+    margin-left: 320px; }
+  .row .offset6 {
+    margin-left: 380px; }
+  .row .offset7 {
+    margin-left: 440px; }
+  .row .offset8 {
+    margin-left: 500px; }
+  .row .offset9 {
+    margin-left: 560px; }
+  .row .offset10 {
+    margin-left: 620px; }
+  .row .offset11 {
+    margin-left: 680px; }
+  .row .offset12 {
+    margin-left: 740px; }
 
-6: 
-7: // GRID SYSTEM
-8: // -----------
-9: 
-10: .row 
-11:    @include clearfix()
-12:    margin-left: -20px
-13: 
-14:    // Default columns
-15:    .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12, .span13, .span14, .span15, .span16 
-16:       display: inline
+html, body {
+  background-color: white; }
 
-Backtrace:
-/Users/brendan/Documents/GithubRepos/bootstrap.sass/lib/sass/scaffolding.sass:11:in `clearfix'
-/Users/brendan/Documents/GithubRepos/bootstrap.sass/lib/sass/scaffolding.sass:11
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:169:in `visit_mixin'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:235:in `visit_rule'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:47:in `visit_root'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/engine.rb:293:in `_render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/engine.rb:240:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:319:in `update_stylesheet'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:181:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:175:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:175:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:173:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:173:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:252:in `watch'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:73:in `call'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:73:in `run_callback'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:55:in `callback_action'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:35:in `update'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:39:in `modified'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:37:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:37:in `modified'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:18:in `refresh'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:17:in `run'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:17:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:17:in `run'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:15:in `loop'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:15:in `run'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/monitor.rb:26:in `run'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm.rb:20:in `monitor'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:245:in `watch'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin.rb:111:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin.rb:111:in `method_missing'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/exec.rb:408:in `watch_or_update'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/exec.rb:294:in `process_result'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/exec.rb:41:in `parse'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/sass:8
-/usr/bin/sass:19:in `load'
-/usr/bin/sass:19
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined mixin 'clearfix'.\A         on line 11 of /Users/brendan/Documents/GithubRepos/bootstrap.sass/lib/sass/scaffolding.sass, in `clearfix'\A         from line 11 of /Users/brendan/Documents/GithubRepos/bootstrap.sass/lib/sass/scaffolding.sass\A \A 6: \A 7: // GRID SYSTEM\A 8: // -----------\A 9: \A 10: .row \A 11:    @include clearfix()\A 12:    margin-left: -20px\A 13: \A 14:    // Default columns\A 15:    .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12, .span13, .span14, .span15, .span16 \A 16:       display: inline"; }
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  color: gray;
+  text-rendering: optimizeLegibility; }
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  zoom: 1; }
+  .container:before, .container:after {
+    display: table;
+    content: ""; }
+  .container:after {
+    clear: both; }
+
+.container-fluid {
+  padding: 0 20px;
+  zoom: 1;
+  float: left;
+  width: 220px; }
+  .container-fluid:before, .container-fluid:after {
+    display: table;
+    content: ""; }
+  .container-fluid:after {
+    clear: both; }
+  .container-fluid .content {
+    min-width: 700px;
+    max-width: 1180px;
+    margin-left: 240px; }
+
+a {
+  color: #0069d6;
+  text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit; }
+  a:hover {
+    color: #0050a3;
+    text-decoration: underline; }
+
+.btn {
+  display: inline-block;
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), color-stop(0.25, white), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(white, white 0.25, #e6e6e6);
+  background-image: -moz-linear-gradient(white, white 0.25, #e6e6e6);
+  background-image: -ms-linear-gradient(white, white 0.25, #e6e6e6);
+  background-image: -o-linear-gradient(white, white 0.25, #e6e6e6);
+  background-image: linear-gradient(white, white 0.25, #e6e6e6);
+  padding: 4px 14px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  color: #333333;
+  font-size: 13px;
+  line-height: 18px;
+  border: 1px solid #cccccc;
+  border-bottom-color: #bbbbbb;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
+  .btn:hover {
+    background-position: 0 -15px;
+    color: #333333;
+    text-decoration: none; }
+
+.primary {
+  background-color: #0064cd;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
+  background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
+  background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -o-linear-gradient(top, #049cdb, #0064cd);
+  background-image: linear-gradient(top, #049cdb, #0064cd);
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid #004b9a;
+  border-bottom-color: #003f81; }
+  .primary:hover {
+    color: white; }
+
+.btn {
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  transition: 0.1s linear all; }
+  .btn.primary {
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-color: #0064cd #0064cd #003f81;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%); }
+    .btn.primary:hover {
+      color: white; }
+  .btn.large {
+    font-size: 16px;
+    line-height: 28px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px; }
+  .btn.small {
+    padding-right: 9px;
+    padding-left: 9px;
+    font-size: 11px; }
+  .btn.disabled {
+    background-image: none;
+    -khtml-opacity: 0.65;
+    -moz-opacity: 0.65;
+    opacity: 0.65;
+    cursor: default;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+  .btn:disabled {
+    background-image: none;
+    -khtml-opacity: 0.65;
+    -moz-opacity: 0.65;
+    opacity: 0.65;
+    cursor: default;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+    .btn:disabled.primary {
+      color: white; }
+  .btn:active {
+    -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+
+button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+.btn.danger, .btn.danger:hover, .btn.error, .btn.error:hover, .btn.success, .btn.success:hover, .btn.info, .btn.info:hover, .alert-message.danger, .alert-message.danger:hover, .alert-message.error, .alert-message.error:hover, .alert-message.success, .alert-message.success:hover, .alert-message.info, .alert-message.info:hover {
+  color: white; }
+.btn.danger, .btn.error, .alert-message.danger, .alert-message.error {
+  background-color: #c43c35;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ee5f5b), to(#c43c35));
+  background-image: -moz-linear-gradient(top, #ee5f5b, #c43c35);
+  background-image: -ms-linear-gradient(top, #ee5f5b, #c43c35);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ee5f5b), color-stop(100%, #c43c35));
+  background-image: -webkit-linear-gradient(top, #ee5f5b, #c43c35);
+  background-image: -o-linear-gradient(top, #ee5f5b, #c43c35);
+  background-image: linear-gradient(top, #ee5f5b, #c43c35);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #c43c35 #c43c35 #882a25;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%); }
+.btn.success, .alert-message.success {
+  background-color: #57a957;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#62c462), to(#57a957));
+  background-image: -moz-linear-gradient(top, #62c462, #57a957);
+  background-image: -ms-linear-gradient(top, #62c462, #57a957);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #62c462), color-stop(100%, #57a957));
+  background-image: -webkit-linear-gradient(top, #62c462, #57a957);
+  background-image: -o-linear-gradient(top, #62c462, #57a957);
+  background-image: linear-gradient(top, #62c462, #57a957);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #57a957 #57a957 #3d773d;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%); }
+.btn.info, .alert-message.info {
+  background-color: #339bb9;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#5bc0de), to(#339bb9));
+  background-image: -moz-linear-gradient(top, #5bc0de, #339bb9);
+  background-image: -ms-linear-gradient(top, #5bc0de, #339bb9);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5bc0de), color-stop(100%, #339bb9));
+  background-image: -webkit-linear-gradient(top, #5bc0de, #339bb9);
+  background-image: -o-linear-gradient(top, #5bc0de, #339bb9);
+  background-image: linear-gradient(top, #5bc0de, #339bb9);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #339bb9 #339bb9 #22697d;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%); }

@@ -1,6 +1,6 @@
 3.1.7 (Brainy Betty)
-453acd6f4bb2e38d25cfe2c2f5c984fab0c79dae
-o:Sass::Tree::RootNode	:@template"Ú!/* Preboot.sass
+cb4bb98073668fbf2d60868e09b62e81c66dd00d
+o:Sass::Tree::RootNode	:@template"¼/* Preboot.sass
  * Variables and mixins to pre-ignite any new web development project
  * ------------------------------------------------------------------ */
 
@@ -228,36 +228,11 @@ $siteWidth:         ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gr
    text-shadow: 0 -1px 0 rgba(0,0,0,.25)   
    border-color: $secondaryColor $secondaryColor darken($secondaryColor, 15%)   
    border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%)   
-
-// Shared colors for buttons and alerts
-.btn, .alert-message    
-   // Set text color
-   &.danger,
-   &.danger:hover,
-   &.error,
-   &.error:hover,
-   &.success,
-   &.success:hover,
-   &.info,
-   &.info:hover    
-      color: $white
-
-   // Danger and error appear as red
-   &.danger,
-   &.error    
-      @include gradientBar(#ee5f5b, #c43c35)   
-
-   // Success appears as green
-   &.success    
-      @include gradientBar(#62c462, #57a957)   
-
-   // Info appears as a neutral blue
-   &.info    
-      @include gradientBar(#5bc0de, #339bb9)   
+  
 
 
   
-   :@has_childrenT:@options{ :@children[Oo:Sass::Tree::CommentNode:@silentF:@filename"sass/preboot.sass:@lines[ ;@:
+   :@has_childrenT:@options{ :@children[Mo:Sass::Tree::CommentNode:@silentF:@filename"N/Users/brendan/Documents/GithubRepos/bootstrap.sass/lib/sass/preboot.sass:@lines[ ;@:
 @linei:
 @loud0:@value"ž/* Preboot.sass
  * Variables and mixins to pre-ignite any new web development project
@@ -376,11 +351,11 @@ space;	[ ;.;/;.;/;[ o;
 width;@
 ;@;iH;o;	;"
 width;@;iH;"
-width;	[ ;.;/;[[o;;"height;{:cache_location".sass-cache:importero: Sass::Importers::Filesystem:
-@root"</Users/brendan/Documents/GithubRepos/bootstrap.sass/lib:line_comments0:full_exceptionT:template_location[["	sass"stylesheets:
-cacheT:css_location"./public/stylesheets:original_filename"sass/bootstrap.sass:filesystem_importerc Sass::Importers::Filesystem:cache_storeo:"Sass::CacheStores::Filesystem:@cache_location@f:
-style:nested:css_filename"stylesheets/bootstrap.css:syntax:	sass:property_syntax0:always_updateF:load_paths[o;D;E"</Users/brendan/Documents/GithubRepos/bootstrap.sass/libo;D;E"A/Users/brendan/Documents/GithubRepos/bootstrap.sass/lib/sass:filename@
-:always_checkT;"heighto; ;![ ;"["px;@e;iF;i
+width;	[ ;.;/;[[o;;"height;{:cache_location".sass-cache:importero: Sass::Importers::Filesystem:
+@root"</Users/brendan/Documents/GithubRepos/bootstrap.sass/lib:line_comments0:template_location[["	sass"stylesheets:full_exceptionT:
+cacheT:css_location"./public/stylesheets:original_filename"P/Users/brendan/Documents/GithubRepos/bootstrap.sass/lib/sass/bootstrap.sass:filesystem_importerc Sass::Importers::Filesystem:cache_storeo:"Sass::CacheStores::Filesystem:@cache_location@f:
+style:nested:syntax:	sass:property_syntax0:always_updateF:load_paths[o;D;E"</Users/brendan/Documents/GithubRepos/bootstrap.sass/libo;D;E"A/Users/brendan/Documents/GithubRepos/bootstrap.sass/lib/sass:always_checkT:filename@
+;"heighto; ;![ ;"["px;@e;iF;i
 ;#"5px[o;;"
 width;@e;"
 widtho; ;![ ;"["px;@e;iF;i
@@ -425,12 +400,12 @@ comma;	[ ;.;/o;,;-i ;["font-size;@
 Timeso;<	;9;=;@;ie;"Newo;<	;9;=;@;ie;"
 Roman;@;Ao;<	;9;=;@;ie;"
 Timeso;<	;9;=;@;ie;"
-serif;@;];	[ ;.;/o;,;-i ;["font-size;@
+serif;@;\;	[ ;.;/o;,;-i ;["font-size;@
 ;@;if;o;	;"	size;@;if;"	size;	[ ;.;/o;,;-i ;["font-weight;@
 ;@;ig;o;	;"weight;@;ig;"weight;	[ ;.;/o;,;-i ;["line-height;@
 ;@;ih;o;	;"lineHeight;@;ih;"lineHeight;	[ ;.;/;[[o;;"weight;@e;"weighto;<	;9;=;@e;id;"normal[o;;"	size;@e;"	sizeo; ;![ ;"["px;@e;id;i;#"	14px[o;;"lineHeight;@e;"lineHeighto; ;![ ;"["px;@e;id;i;#"	20pxo;+;"font-monospace;T;@
 ;@;ij;	[	o;,;-i ;["font-family;@
-;@;ik;o;?	;@;ik;[o;<	;9;>;@;ik;"Monacoo;?	;@;ik;[o;<	;9;=;@;ik;"Couriero;<	;9;=;@;ik;"New;@;Ao;<	;9;=;@;ik;"monospace;@;];	[ ;.;/o;,;-i ;["font-size;@
+;@;ik;o;?	;@;ik;[o;<	;9;>;@;ik;"Monacoo;?	;@;ik;[o;<	;9;=;@;ik;"Couriero;<	;9;=;@;ik;"New;@;Ao;<	;9;=;@;ik;"monospace;@;\;	[ ;.;/o;,;-i ;["font-size;@
 ;@;il;o;	;"	size;@;il;"	size;	[ ;.;/o;,;-i ;["font-weight;@
 ;@;im;o;	;"weight;@;im;"weight;	[ ;.;/o;,;-i ;["line-height;@
 ;@;in;o;	;"lineHeight;@;in;"lineHeight;	[ ;.;/;[[o;;"weight;@e;"weighto;<	;9;=;@e;ij;"normal[o;;"	size;@e;"	sizeo; ;![ ;"["px;@e;ij;i;#"	12px[o;;"lineHeight;@e;"lineHeighto; ;![ ;"["px;@e;ij;i;#"	20pxo;
@@ -439,7 +414,7 @@ serif;@;];	[ ;.;/o;,;-i ;["font-size;@
 ;@;is;	[o;,;-i ;["
 width;@
 ;@;it;o;	;"siteWidth;@;it;"siteWidth;	[ ;.;/o;,;-i ;["margin;@
-;@;iu;o;?	;@;iu;[o; ;!@%;"[ ;@;iu;i ;#"0o;<	;9;=;@;iu;"	auto;@;A;	[ ;.;/o;Z;"clearfix;@
+;@;iu;o;?	;@;iu;[o; ;!@%;"[ ;@;iu;i ;#"0o;<	;9;=;@;iu;"	auto;@;A;	[ ;.;/o;Y;"clearfix;@
 ;@;iv;{ ;	[ ;[ ;[ o;+;"columns;T;@
 ;@;ix;	[o;,;-i ;["
 width;@
@@ -623,12 +598,12 @@ o;<	;9;=;@;i¼;"linearo;?	;@;i¼;[o;<	;9;=;@;i¼;"	lefto;<	;9;=;@
 ;@;iÙ;o;$
 ;@;iÙ;%o; ;!@%;"[ ;@;iÙ;ii;#"100;&:div;(o;	;"opacity;@;iÙ;"opacity;	[ ;.;/o;,;-i ;["-moz-opacity;@
 ;@;iÚ;o;$
-;@;iÚ;%o; ;!@%;"[ ;@;iÚ;ii;#"100;&;^;(o;	;"opacity;@;iÚ;"opacity;	[ ;.;/o;,;-i ;["opacity;@
+;@;iÚ;%o; ;!@%;"[ ;@;iÚ;ii;#"100;&;];(o;	;"opacity;@;iÚ;"opacity;	[ ;.;/o;,;-i ;["opacity;@
 ;@;iÛ;o;$
-;@;iÛ;%o; ;!@%;"[ ;@;iÛ;ii;#"100;&;^;(o;	;"opacity;@;iÛ;"opacity;	[ ;.;/;[[o;;"opacity;@e;"opacityo; ;!@%;"[ ;@e;i×;ii;#"100o;
+;@;iÛ;%o; ;!@%;"[ ;@;iÛ;ii;#"100;&;];(o;	;"opacity;@;iÛ;"opacity;	[ ;.;/;[[o;;"opacity;@e;"opacityo; ;!@%;"[ ;@e;i×;ii;#"100o;
 ;T;@
 ;[ ;@;iß;0;"2// Gradient Bar Colors for buttons and alerts;	[ o;+;"gradientBar;T;@
-;@;ià;	[	o;Z;"gradient-vertical;@
+;@;ià;	[	o;Y;"gradient-vertical;@
 ;@;iá;{ ;	[ ;[o;	;"primaryColor;@;iá;"primaryColoro;	;"secondaryColor;@;iá;"secondaryColoro;,;-i ;["text-shadow;@
 ;@;iâ;o;?	;@;iâ;[	o; ;!@%;"[ ;@;iâ;i ;#"0o; ;![ ;"["px;@;iâ;iú;#"	-1pxo; ;!@%;"[ ;@;iâ;i ;#"0o;
 ;"	rgba;@;iâ;{ ;[	o; ;!@%;"[ ;@;iâ;i ;#"0o; ;!@%;"[ ;@;iâ;i ;#"0o; ;!@%;"[ ;@;iâ;i ;#"0o; ;!@%;"[ ;@;iâ;f	0.25;#"	0.25;@;A;	[ ;.;/o;,;-i ;["border-color;@
@@ -638,66 +613,4 @@ o;<	;9;=;@;i¼;"linearo;?	;@;i¼;[o;<	;9;=;@;i¼;"	lefto;<	;9;=;@
 ;"	rgba;@;iä;{ ;[	o; ;!@%;"[ ;@;iä;i ;#"0o; ;!@%;"[ ;@;iä;i ;#"0o; ;!@%;"[ ;@;iä;i ;#"0o; ;!@%;"[ ;@;iä;f0.10000000000000001 ™š;#"0.1o;
 ;"	rgba;@;iä;{ ;[	o; ;!@%;"[ ;@;iä;i ;#"0o; ;!@%;"[ ;@;iä;i ;#"0o; ;!@%;"[ ;@;iä;i ;#"0o; ;!@%;"[ ;@;iä;f0.10000000000000001 ™š;#"0.1o;
 ;"fadein;@;iä;{ ;[o;
-;"	rgba;@;iä;{ ;[	o; ;!@%;"[ ;@;iä;i ;#"0o; ;!@%;"[ ;@;iä;i ;#"0o; ;!@%;"[ ;@;iä;i ;#"0o; ;!@%;"[ ;@;iä;f0.10000000000000001 ™š;#"0.1o; ;![ ;"["%;@;iä;i;#"15%;@;A;	[ ;.;/;[[o;;"primaryColor;@e;"primaryColor0[o;;"secondaryColor;@e;"secondaryColor0o;
-;T;@
-;[ ;@;iæ;0;",// Shared colors for buttons and alerts;	[ o;0;-i ;T;@
-;1[".btn, .alert-message;@;iç;2o;3;4[o;5;4[o;6;4[o:Sass::Selector::Class;["btn;@
-;iç;@
-;iço;5;4[o;6;4[o;_;["alert-message;@
-;iç;@
-;iç;@
-;iç;	[o;
-;T;@
-;[ ;@;iè;0;"// Set text color;	[ o;0;-i ;T;@
-;1["g&.danger,
-&.danger:hover,
-&.error,
-&.error:hover,
-&.success,
-&.success:hover,
-&.info,
-&.info:hover;@;ié;2o;3;4[o;5;4[o;6;4[o;7;" ;io;_;["danger;@A;i;@A;io;5;4["
-o;6;4[o;7;@A;io;_;["danger;@A;io;8
-;["
-hover;9;:;;0;@A;i;@A;io;5;4["
-o;6;4[o;7;@A;io;_;["
-error;@A;i;@A;io;5;4["
-o;6;4[o;7;@A;io;_;["
-error;@A;io;8
-;["
-hover;9;:;;0;@A;i;@A;io;5;4["
-o;6;4[o;7;@A;io;_;["success;@A;i;@A;io;5;4["
-o;6;4[o;7;@A;io;_;["success;@A;io;8
-;["
-hover;9;:;;0;@A;i;@A;io;5;4["
-o;6;4[o;7;@A;io;_;["	info;@A;i;@A;io;5;4["
-o;6;4[o;7;@A;io;_;["	info;@A;io;8
-;["
-hover;9;:;;0;@A;i;@A;i;@A;i;	[o;,;-i ;["
-color;@
-;@;iñ;o;	;"
-white;@;iñ;"
-white;	[ ;.;/o;
-;T;@
-;[ ;@;ió;0;"&// Danger and error appear as red;	[ o;0;-i ;T;@
-;1["&.danger,
-&.error;@;iô;2o;3;4[o;5;4[o;6;4[o;7;" ;io;_;["danger;@¦;i;@¦;io;5;4["
-o;6;4[o;7;@¦;io;_;["
-error;@¦;i;@¦;i;@¦;i;	[o;Z;"gradientBar;@
-;@;iö;{ ;	[ ;[o;	;@;iö;0;{	;iî;i;id;i`o;	;@;iö;0;{	;iÄ;i;iA;i:o;
-;T;@
-;[ ;@;iø;0;" // Success appears as green;	[ o;0;-i ;T;@
-;1["&.success;@;iù;2o;3;4[o;5;4[o;6;4[o;7;@
-;iùo;_;["success;@
-;iù;@
-;iù;@
-;iù;	[o;Z;"gradientBar;@
-;@;iú;{ ;	[ ;[o;	;@;iú;0;{	;ig;i;iÄ;igo;	;@;iú;0;{	;i\;i;i©;i\o;
-;T;@
-;[ ;@;iü;0;"&// Info appears as a neutral blue;	[ o;0;-i ;T;@
-;1["&.info;@;iý;2o;3;4[o;5;4[o;6;4[o;7;@
-;iýo;_;["	info;@
-;iý;@
-;iý;@
-;iý;	[o;Z;"gradientBar;@
-;@;iþ;{ ;	[ ;[o;	;@;iþ;0;{	;i`;i;iÀ;iÞo;	;@;iþ;0;{	;i8;i;i›;i¹
+;"	rgba;@;iä;{ ;[	o; ;!@%;"[ ;@;iä;i ;#"0o; ;!@%;"[ ;@;iä;i ;#"0o; ;!@%;"[ ;@;iä;i ;#"0o; ;!@%;"[ ;@;iä;f0.10000000000000001 ™š;#"0.1o; ;![ ;"["%;@;iä;i;#"15%;@;A;	[ ;.;/;[[o;;"primaryColor;@e;"primaryColor0[o;;"secondaryColor;@e;"secondaryColor0

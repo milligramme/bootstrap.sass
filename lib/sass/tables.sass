@@ -3,6 +3,7 @@
  * Tables for, you guessed it, tabular data
  * ---------------------------------------- */
 
+@import "preboot"
 
 // BASELINE STYLES
 // ---------------
@@ -64,13 +65,13 @@ table
    // Style the ascending (reverse alphabetical) column header
    .header:hover 
       &:after 
-         visibility:visible
+         visibility: visible
     
   
    // Style the descending (alphabetical) column header
    .headerSortDown, .headerSortDown:hover 
       &:after 
-         visibility:visible
+         visibility: visible
          @include opacity(60)
     
   
@@ -81,7 +82,7 @@ table
          border-left: 4px solid transparent
          border-right: 4px solid transparent
          border-top: 4px solid #000
-         visibility:visible
+         visibility: visible
          @include box-shadow(none) //can't add boxshadow to downward facing arrow :(
          @include opacity(60)
     

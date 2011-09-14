@@ -1,88 +1,93 @@
-/*
-Syntax error: Undefined variable: "$baseline".
-        on line 12 of sass/tables.sass
+/* Tables.sass
+ * Tables for, you guessed it, tabular data
+ * ---------------------------------------- */
+/* Preboot.sass
+ * Variables and mixins to pre-ignite any new web development project
+ * ------------------------------------------------------------------ */
+table {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 0;
+  border-collapse: separate;
+  font-size: 13px; }
+  table th, table td {
+    padding: 10px 10px 9px;
+    line-height: 13.5px;
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid #dddddd; }
+  table th {
+    padding-top: 9px;
+    font-weight: bold;
+    border-bottom-width: 2px; }
 
-7: // BASELINE STYLES
-8: // ---------------
-9: 
-10: table 
-11:    width: 100%
-12:    margin-bottom: $baseline
-13:    padding: 0
-14:    border-collapse: separate
-15:    font-size: 13px
-16:    th, td 
-17:       padding: 10px 10px 9px
+.zebra-striped tbody tr:nth-child(odd) td {
+  background-color: #f9f9f9; }
+.zebra-striped tbody tr:hover td {
+  background-color: #f5f5f5; }
+.zebra-striped .header {
+  cursor: pointer; }
+  .zebra-striped .header:after {
+    content: "";
+    float: right;
+    margin-top: 7px;
+    border-width: 0 4px 4px;
+    border-style: solid;
+    border-color: black transparent;
+    visibility: hidden; }
+.zebra-striped .headerSortUp, .zebra-striped .headerSortDown {
+  background-color: rgba(141, 192, 219, 0.25);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0; }
+.zebra-striped .header:hover:after {
+  visibility: visible; }
+.zebra-striped .headerSortDown:after, .zebra-striped .headerSortDown:hover:after {
+  visibility: visible;
+  -khtml-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6; }
+.zebra-striped .headerSortUp:after {
+  border-bottom: none;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid black;
+  visibility: visible;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -khtml-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6; }
 
-Backtrace:
-sass/tables.sass:12
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/script/variable.rb:50:in `_perform'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/script/node.rb:40:in `perform'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:215:in `visit_prop'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:235:in `visit_rule'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:47:in `visit_root'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/engine.rb:293:in `_render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/engine.rb:240:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:319:in `update_stylesheet'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:181:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:175:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:175:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:173:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:173:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:252:in `watch'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:73:in `call'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:73:in `run_callback'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:55:in `callback_action'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:35:in `update'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:39:in `modified'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:37:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:37:in `modified'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:18:in `refresh'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:17:in `run'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:17:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:17:in `run'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:15:in `loop'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:15:in `run'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/monitor.rb:26:in `run'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm.rb:20:in `monitor'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:245:in `watch'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin.rb:111:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin.rb:111:in `method_missing'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/exec.rb:408:in `watch_or_update'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/exec.rb:294:in `process_result'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/exec.rb:41:in `parse'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/sass:8
-/usr/bin/sass:19:in `load'
-/usr/bin/sass:19
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$baseline\".\A         on line 12 of sass/tables.sass\A \A 7: // BASELINE STYLES\A 8: // ---------------\A 9: \A 10: table \A 11:    width: 100%\A 12:    margin-bottom: $baseline\A 13:    padding: 0\A 14:    border-collapse: separate\A 15:    font-size: 13px\A 16:    th, td \A 17:       padding: 10px 10px 9px"; }
+table .blue {
+  color: #049cdb;
+  border-bottom-color: #049cdb; }
+table .headerSortUp.blue, table .headerSortDown.blue {
+  background-color: #ade6fe; }
+table .green {
+  color: #46a546;
+  border-bottom-color: #46a546; }
+table .headerSortUp.green, table .headerSortDown.green {
+  background-color: #cdeacd; }
+table .red {
+  color: #9d261d;
+  border-bottom-color: #9d261d; }
+table .headerSortUp.red, table .headerSortDown.red {
+  background-color: #f4c8c5; }
+table .yellow {
+  color: #ffc40d;
+  border-bottom-color: #ffc40d; }
+table .headerSortUp.yellow, table .headerSortDown.yellow {
+  background-color: #fff6d9; }
+table .orange {
+  color: #f89406;
+  border-bottom-color: #f89406; }
+table .headerSortUp.orange, table .headerSortDown.orange {
+  background-color: #fee9cc; }
+table .purple {
+  color: #7a43b6;
+  border-bottom-color: #7a43b6; }
+table .headerSortUp.purple, table .headerSortDown.purple {
+  background-color: #e2d5f0; }

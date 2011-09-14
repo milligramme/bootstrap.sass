@@ -1,99 +1,683 @@
-/*
-Syntax error: Undefined mixin 'gradient-vertical'.
-        on line 22 of sass/patterns.sass, in `gradient-vertical'
-        from line 22 of sass/patterns.sass
+/* Patterns.sass
+ * Repeatable UI elements outside the base styles provided from the scaffolding
+ * ---------------------------------------------------------------------------- */
+/* Preboot.sass
+ * Variables and mixins to pre-ignite any new web development project
+ * ------------------------------------------------------------------ */
+.topbar {
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  overflow: visible; }
+  .topbar .fill {
+    background: #222222;
+    background-color: #222222;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#333333), to(#222222));
+    background-image: -moz-linear-gradient(top, #333333, #222222);
+    background-image: -ms-linear-gradient(top, #333333, #222222);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #222222));
+    background-image: -webkit-linear-gradient(top, #333333, #222222);
+    background-image: -o-linear-gradient(top, #333333, #222222);
+    background-image: linear-gradient(top, #333333, #222222);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1); }
+  .topbar a {
+    color: #bfbfbf;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
+  .topbar a:hover, .topbar ul li.active a {
+    background-color: #333333;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+    text-decoration: none; }
+  .topbar h3 {
+    position: relative; }
+    .topbar h3 a {
+      float: left;
+      display: block;
+      padding: 8px 20px 12px;
+      margin-left: -20px;
+      color: white;
+      font-size: 20px;
+      font-weight: 200;
+      line-height: 1; }
+  .topbar form {
+    float: left;
+    margin: 5px 0 0 0;
+    position: relative;
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1; }
+    .topbar form input {
+      background-color: #444444;
+      background-color: rgba(255, 255, 255, 0.3);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: normal;
+      font-weight: 13px;
+      line-height: 1;
+      width: 220px;
+      padding: 4px 9px;
+      color: white;
+      color: rgba(255, 255, 255, 0.75);
+      border: 1px solid #111111;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(255, 255, 255, 0.25);
+      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(255, 255, 255, 0.25);
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(255, 255, 255, 0.25);
+      -webkit-transition: none;
+      -moz-transition: none;
+      transition: none; }
+      .topbar form input:-moz-placeholder {
+        color: #e6e6e6; }
+      .topbar form input::-webkit-input-placeholder {
+        color: #e6e6e6; }
+      .topbar form input:hover {
+        background-color: #bfbfbf;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: white; }
+      .topbar form input:focus, .topbar form input.focused {
+        outline: none;
+        background-color: white;
+        color: #404040;
+        text-shadow: 0 1px 0 white;
+        border: 0;
+        padding: 5px 10px;
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.15); }
+  .topbar ul {
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    position: relative; }
+    .topbar ul.secondary-nav {
+      float: right;
+      margin-left: 10px;
+      margin-right: 0; }
+    .topbar ul li {
+      display: block;
+      float: left;
+      font-size: 13px; }
+      .topbar ul li a {
+        display: block;
+        float: none;
+        padding: 10px 10px 11px;
+        line-height: 19px;
+        text-decoration: none; }
+        .topbar ul li a:hover {
+          color: white;
+          text-decoration: none; }
+      .topbar ul li.active a {
+        background-color: #222222;
+        background-color: rgba(0, 0, 0, 0.5); }
+    .topbar ul.primary-nav li ul {
+      left: 0; }
+    .topbar ul.secondary-nav li ul {
+      right: 0; }
+    .topbar ul li.menu {
+      position: relative; }
+      .topbar ul li.menu a.menu:after {
+        width: 0px;
+        height: 0px;
+        display: inline-block;
+        content: "&darr";
+        text-indent: -99999px;
+        vertical-align: top;
+        margin-top: 8px;
+        margin-left: 4px;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid white;
+        -khtml-opacity: 0.5;
+        -moz-opacity: 0.5;
+        opacity: 0.5; }
+      .topbar ul li.menu.open a.menu, .topbar ul li.menu.open a:hover {
+        background-color: #444444;
+        background-color: rgba(255, 255, 255, 0.1);
+        *background-color: #444444;
+        color: white; }
+        .topbar ul li.menu.open a.menu ul, .topbar ul li.menu.open a:hover ul {
+          display: block; }
+          .topbar ul li.menu.open a.menu ul li a, .topbar ul li.menu.open a:hover ul li a {
+            background-color: transparent;
+            font-weight: normal; }
+            .topbar ul li.menu.open a.menu ul li a:hover, .topbar ul li.menu.open a:hover ul li a:hover {
+              background-color: rgba(255, 255, 255, 0.1);
+              *background-color: #444444;
+              color: white; }
+          .topbar ul li.menu.open a.menu ul li.active a, .topbar ul li.menu.open a:hover ul li.active a {
+            background-color: rgba(255, 255, 255, 0.1);
+            font-weight: bold; }
+    .topbar ul li ul {
+      background-color: #333333;
+      float: left;
+      display: none;
+      position: absolute;
+      top: 40px;
+      min-width: 160px;
+      max-width: 220px;
+      _width: 160px;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0;
+      text-align: left;
+      border: 0;
+      zoom: 1;
+      -webkit-border-radius: 0 0 5px 5px;
+      -moz-border-radius: 0 0 5px 5px;
+      border-radius: 0 0 5px 5px;
+      -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+      .topbar ul li ul li {
+        float: none;
+        clear: both;
+        display: block;
+        background: none;
+        font-size: 12px; }
+        .topbar ul li ul li a {
+          display: block;
+          padding: 6px 15px;
+          clear: both;
+          font-weight: normal;
+          line-height: 19px;
+          color: #bbbbbb; }
+          .topbar ul li ul li a:hover {
+            background-color: #333333;
+            background-color: rgba(255, 255, 255, 0.25);
+            color: white; }
+      .topbar ul li ul.divider {
+        height: 1px;
+        overflow: hidden;
+        background: #222222;
+        background: rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 5px 0; }
+      .topbar ul li ul span {
+        clear: both;
+        display: block;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 6px 15px;
+        cursor: default;
+        color: gray;
+        border-top: 1px solid rgba(0, 0, 0, 0.2); }
 
-17:    overflow: visible
-18: 
-19:    // gradient is applied to it's own element because overflow visible is not honored by ie when filter is present
-20:    .fill 
-21:       background: #222
-22:       @include gradient-vertical(#333, #222)
-23:       $shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)
-24:       @include box-shadow($shadow)
-25:   
-26: 
-27:    // Links get text shadow
+.hero-unit {
+  background-color: #f5f5f5;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  padding: 60px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px; }
+  .hero-unit h1 {
+    margin-bottom: 0;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px; }
+  .hero-unit p {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 27px; }
 
-Backtrace:
-sass/patterns.sass:22:in `gradient-vertical'
-sass/patterns.sass:22
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:169:in `visit_mixin'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:235:in `visit_rule'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:235:in `visit_rule'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:47:in `visit_root'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/engine.rb:293:in `_render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/engine.rb:240:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:319:in `update_stylesheet'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:181:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:175:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:175:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:173:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:173:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:252:in `watch'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:73:in `call'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:73:in `run_callback'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:55:in `callback_action'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:35:in `update'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:39:in `modified'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:37:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:37:in `modified'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:18:in `refresh'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:17:in `run'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:17:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:17:in `run'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:15:in `loop'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:15:in `run'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/monitor.rb:26:in `run'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm.rb:20:in `monitor'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:245:in `watch'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin.rb:111:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin.rb:111:in `method_missing'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/exec.rb:408:in `watch_or_update'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/exec.rb:294:in `process_result'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/exec.rb:41:in `parse'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/sass:8
-/usr/bin/sass:19:in `load'
-/usr/bin/sass:19
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined mixin 'gradient-vertical'.\A         on line 22 of sass/patterns.sass, in `gradient-vertical'\A         from line 22 of sass/patterns.sass\A \A 17:    overflow: visible\A 18: \A 19:    // gradient is applied to it's own element because overflow visible is not honored by ie when filter is present\A 20:    .fill \A 21:       background: #222\A 22:       @include gradient-vertical(#333, #222)\A 23:       $shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)\A 24:       @include box-shadow($shadow)\A 25:   \A 26: \A 27:    // Links get text shadow"; }
+footer {
+  margin-top: 17px;
+  padding-top: 17px;
+  border-top: 1px solid #eeeeee; }
+
+.page-header {
+  margin-bottom: 17px;
+  border-bottom: 1px solid #dddddd;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
+  .page-header h1 {
+    margin-bottom: 8px; }
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), color-stop(0.25, white), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(white, white 0.25, #e6e6e6);
+  background-image: -moz-linear-gradient(white, white 0.25, #e6e6e6);
+  background-image: -ms-linear-gradient(white, white 0.25, #e6e6e6);
+  background-image: -o-linear-gradient(white, white 0.25, #e6e6e6);
+  background-image: linear-gradient(white, white 0.25, #e6e6e6);
+  padding: 5px 14px 6px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  color: #333333;
+  font-size: 13px;
+  line-height: normal;
+  border: 1px solid #cccccc;
+  border-bottom-color: #bbbbbb;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  transition: 0.1s linear all; }
+  .btn:hover {
+    background-position: 0 -15px;
+    color: #333333;
+    text-decoration: none; }
+  .btn.primary {
+    color: white;
+    background-color: #0064cd;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
+    background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
+    background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
+    background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
+    background-image: -o-linear-gradient(top, #049cdb, #0064cd);
+    background-image: linear-gradient(top, #049cdb, #0064cd);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-color: #0064cd #0064cd #003f81;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%); }
+  .btn.disabled {
+    cursor: default;
+    background-image: none;
+    -khtml-opacity: 0.65;
+    -moz-opacity: 0.65;
+    opacity: 0.65; }
+  .btn:disabled {
+    cursor: default;
+    background-image: none;
+    -khtml-opacity: 0.65;
+    -moz-opacity: 0.65;
+    opacity: 0.65; }
+  .btn:active {
+    -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05); }
+  .btn.large {
+    font-size: 16px;
+    line-height: normal;
+    padding: 9px 14px 9px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px; }
+  .btn.small {
+    padding: 7px 9px 7px;
+    font-size: 11px; }
+
+button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+.alert-message {
+  background-color: #eedc94;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fceec1), to(#eedc94));
+  background-image: -moz-linear-gradient(top, #fceec1, #eedc94);
+  background-image: -ms-linear-gradient(top, #fceec1, #eedc94);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fceec1), color-stop(100%, #eedc94));
+  background-image: -webkit-linear-gradient(top, #fceec1, #eedc94);
+  background-image: -o-linear-gradient(top, #fceec1, #eedc94);
+  background-image: linear-gradient(top, #fceec1, #eedc94);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #eedc94 #eedc94 #e4c652;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
+  margin-bottom: 18px;
+  padding: 7px 14px;
+  color: #404040;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border-width: 1px;
+  border-style: solid;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25); }
+  .alert-message h5 {
+    line-height: 18px; }
+  .alert-message p {
+    margin-bottom: 0; }
+  .alert-message div {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    line-height: 28px; }
+  .alert-message .btn {
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25); }
+  .alert-message .close {
+    float: right;
+    margin-top: -2px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 white;
+    -khtml-opacity: 0.2;
+    -moz-opacity: 0.2;
+    opacity: 0.2; }
+    .alert-message .close:hover {
+      color: black;
+      text-decoration: none;
+      -khtml-opacity: 0.4;
+      -moz-opacity: 0.4;
+      opacity: 0.4; }
+  .alert-message.block-message {
+    background-image: none;
+    background-color: #fdf5d9;
+    padding: 14px;
+    border-color: #fceec1;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+    .alert-message.block-message p {
+      margin-right: 30px; }
+    .alert-message.block-message .alert-actions {
+      margin-top: 5px; }
+    .alert-message.block-message.error, .alert-message.block-message.success, .alert-message.block-message.info {
+      color: #404040;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
+    .alert-message.block-message.error {
+      background-color: #fddfde;
+      border-color: #fbc7c6; }
+    .alert-message.block-message.success {
+      background-color: #d1eed1;
+      border-color: #bfe7bf; }
+    .alert-message.block-message.info {
+      background-color: #ddf4fb;
+      border-color: #c6edf9; }
+
+.tabs, .pills {
+  margin: 0 0 20px;
+  padding: 0;
+  zoom: 1; }
+  .tabs:before, .tabs:after, .pills:before, .pills:after {
+    display: table;
+    content: ""; }
+  .tabs:after, .pills:after {
+    clear: both; }
+  .tabs li, .pills li {
+    display: inline; }
+    .tabs li a, .pills li a {
+      float: left;
+      width: auto; }
+
+.tabs {
+  width: 100%;
+  border-bottom: 1px solid #bfbfbf; }
+  .tabs li a {
+    margin-bottom: -1px;
+    margin-right: 2px;
+    padding: 0 15px;
+    line-height: 35px;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0; }
+    .tabs li a:hover {
+      background-color: #e6e6e6;
+      border-bottom: 1px solid #bfbfbf; }
+  .tabs li.active a {
+    background-color: white;
+    padding: 0 14px;
+    border: 1px solid #cccccc;
+    border-bottom: 0;
+    color: gray; }
+
+.pills li a {
+  margin: 5px 3px 5px 0;
+  padding: 0 15px;
+  text-shadow: 0 1px 1px white;
+  line-height: 30px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px; }
+  .pills li a:hover {
+    background: #0050a3;
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); }
+.pills li.active a {
+  background: #0069d6;
+  color: white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); }
+
+.pagination {
+  height: 36px;
+  margin: 18px 0; }
+  .pagination ul {
+    float: left;
+    margin: 0;
+    border: 1px solid #dddddd;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); }
+    .pagination ul li {
+      display: inline; }
+      .pagination ul li a {
+        float: left;
+        padding: 0 14px;
+        line-height: 34px;
+        border-right: 1px solid;
+        border-right-color: #dddddd;
+        border-right-color: rgba(0, 0, 0, 0.15);
+        *border-right-color: #dddddd;
+        text-decoration: none; }
+      .pagination ul li a:hover, .pagination ul li.active a {
+        background-color: #c7eefe; }
+      .pagination ul li.disabled a, .pagination ul li.disabled a:hover {
+        background-color: transparent;
+        color: #bfbfbf; }
+      .pagination ul li.next a {
+        border: 0; }
+
+.well {
+  background-color: #f5f5f5;
+  margin-bottom: 20px;
+  padding: 19px;
+  min-height: 20px;
+  border: 1px solid #eeeeee;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000; }
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2000;
+  width: 560px;
+  margin: -280px 0 0 -250px;
+  background-color: white;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  *border: 1px solid #999999;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box; }
+  .modal .modal-header {
+    border-bottom: 1px solid #eeeeee;
+    padding: 5px 20px; }
+    .modal .modal-header .close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: #999999;
+      line-height: 10px;
+      font-size: 18px; }
+  .modal .modal-body {
+    padding: 20px; }
+  .modal .modal-footer {
+    background-color: #f5f5f5;
+    padding: 14px 20px 15px;
+    border-top: 1px solid #dddddd;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+    -webkit-box-shadow: inset 0 1px 0 white;
+    -moz-box-shadow: inset 0 1px 0 white;
+    box-shadow: inset 0 1px 0 white;
+    zoom: 1;
+    margin-bottom: 0; }
+    .modal .modal-footer:before, .modal .modal-footer:after {
+      display: table;
+      content: ""; }
+    .modal .modal-footer:after {
+      clear: both; }
+    .modal .modal-footer .btn {
+      float: right;
+      margin-left: 10px; }
+
+.twipsy {
+  display: block;
+  position: absolute;
+  visibility: visible;
+  padding: 5px;
+  font-size: 11px;
+  z-index: 1000;
+  -khtml-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8; }
+  .twipsy.above .twipsy-arrow {
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black; }
+  .twipsy.left .twipsy-arrow {
+    top: 50%;
+    right: 0;
+    margin-top: -5px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid black; }
+  .twipsy.below .twipsy-arrow {
+    top: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black; }
+  .twipsy.right .twipsy-arrow {
+    top: 50%;
+    left: 0;
+    margin-top: -5px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid black; }
+  .twipsy .twipsy-inner {
+    padding: 3px 8px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    max-width: 200px;
+    text-decoration: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px; }
+  .twipsy .twipsy-arrow {
+    position: absolute;
+    width: 0;
+    height: 0; }
+
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 5px;
+  display: none; }
+  .popover.above .arrow {
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black; }
+  .popover.right .arrow {
+    top: 50%;
+    left: 0;
+    margin-top: -5px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid black; }
+  .popover.below .arrow {
+    top: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black; }
+  .popover.left .arrow {
+    top: 50%;
+    right: 0;
+    margin-top: -5px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid black; }
+  .popover .arrow {
+    position: absolute;
+    width: 0;
+    height: 0; }
+  .popover .inner {
+    background-color: #333333;
+    background-color: rgba(0, 0, 0, 0.8);
+    *background-color: #333333;
+    padding: 3px;
+    overflow: hidden;
+    width: 280px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3); }
+  .popover .title {
+    background-color: #f5f5f5;
+    padding: 9px 15px;
+    line-height: 1;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+    border-bottom: 1px solid #eeeeee; }
+    .popover .title .content {
+      background-color: white;
+      padding: 14px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding-box;
+      background-clip: padding-box;
+      -webkit-border-radius: 0 0 3px 3px;
+      -moz-border-radius: 0 0 3px 3px;
+      border-radius: 0 0 3px 3px; }
+      .popover .title .content p, .popover .title .content ul, .popover .title .content ol {
+        margin-bottom: 0; }

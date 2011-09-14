@@ -1,88 +1,153 @@
-/*
-Syntax error: Undefined mixin 'font-shorthand'.
-        on line 10 of /Users/brendan/Documents/GithubRepos/bootstrap.sass/lib/sass/type.sass, in `font-shorthand'
-        from line 10 of /Users/brendan/Documents/GithubRepos/bootstrap.sass/lib/sass/type.sass
+/* Typography.sass
+ * Headings, body text, lists, code, and more for a versatile and durable typography system
+ * ---------------------------------------------------------------------------------------- */
+/* Preboot.sass
+ * Variables and mixins to pre-ignite any new web development project
+ * ------------------------------------------------------------------ */
+p {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  margin-bottom: 9px; }
+  p small {
+    font-size: 11px;
+    color: #bfbfbf; }
 
-5: 
-6: // BODY TEXT
-7: // ---------
-8: 
-9: p 
-10:    @include font-shorthand(normal,$basefont,$baseline)
-11:    margin-bottom: $baseline / 2
-12:    small 
-13:       font-size: $basefont - 2
-14:       color: $grayLight
-15:   
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: #404040; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    color: #bfbfbf; }
 
-Backtrace:
-/Users/brendan/Documents/GithubRepos/bootstrap.sass/lib/sass/type.sass:10:in `font-shorthand'
-/Users/brendan/Documents/GithubRepos/bootstrap.sass/lib/sass/type.sass:10
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:169:in `visit_mixin'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:235:in `visit_rule'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:47:in `visit_root'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/engine.rb:293:in `_render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/engine.rb:240:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:319:in `update_stylesheet'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:181:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:175:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:175:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:173:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:173:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:252:in `watch'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:73:in `call'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:73:in `run_callback'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:55:in `callback_action'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:35:in `update'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:39:in `modified'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:37:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:37:in `modified'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:18:in `refresh'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:17:in `run'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:17:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:17:in `run'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:15:in `loop'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:15:in `run'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm/monitor.rb:26:in `run'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/vendor/fssm/lib/fssm.rb:20:in `monitor'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin/compiler.rb:245:in `watch'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin.rb:111:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/plugin.rb:111:in `method_missing'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/exec.rb:408:in `watch_or_update'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/exec.rb:294:in `process_result'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/exec.rb:41:in `parse'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.7/bin/sass:8
-/usr/bin/sass:19:in `load'
-/usr/bin/sass:19
-*/
-body:before {
+h1 {
+  margin-bottom: 18px;
+  font-size: 30px;
+  line-height: 36px; }
+  h1 small {
+    font-size: 18px; }
+
+h2 {
+  font-size: 24px;
+  line-height: 36px; }
+  h2 small {
+    font-size: 14px; }
+
+h3, h4, h5, h6 {
+  line-height: 36px; }
+
+h3 {
+  font-size: 18px; }
+  h3 small {
+    font-size: 14px; }
+
+h4 {
+  font-size: 16px; }
+  h4 small {
+    font-size: 12px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  font-size: 13px;
+  color: #bfbfbf;
+  text-transform: uppercase; }
+
+ul, ol {
+  margin: 0 0 18px 25px; }
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0; }
+
+ul {
+  list-style: disc; }
+
+ol {
+  list-style: decimal; }
+
+li {
+  line-height: 18px;
+  color: gray; }
+
+ul.unstyled {
+  list-style: none;
+  margin-left: 0; }
+
+dl {
+  margin-bottom: 18px; }
+  dl dt, dl dd {
+    line-height: 18px; }
+  dl dt {
+    font-weight: bold; }
+  dl dd {
+    margin-left: 9px; }
+
+hr {
+  margin: 0 0 19px;
+  border: 0;
+  border-bottom: 1px solid #eeeeee; }
+
+strong {
+  font-style: inherit;
+  font-weight: bold;
+  line-height: inherit; }
+
+em {
+  font-style: italic;
+  font-weight: inherit;
+  line-height: inherit; }
+
+.muted {
+  color: #bfbfbf; }
+
+blockquote {
+  margin-bottom: 18px;
+  border-left: 5px solid #eeeeee;
+  padding-left: 15px; }
+  blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0; }
+  blockquote small {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #bfbfbf; }
+    blockquote small:before {
+      content: "\2014 \00A0"; }
+
+address {
+  display: block;
+  line-height: 18px;
+  margin-bottom: 18px; }
+
+code, pre {
+  padding: 0 3px 2px;
+  font-family: Monaco, Andale Mono, Courier New, monospace;
+  font-size: 12px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+code {
+  background-color: #fee9cc;
+  color: rgba(0, 0, 0, 0.75);
+  padding: 1px 3px; }
+
+pre {
+  background-color: #f5f5f5;
+  display: block;
+  padding: 17px;
+  margin: 0 0 18px;
+  line-height: 18px;
+  font-size: 12px;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined mixin 'font-shorthand'.\A         on line 10 of /Users/brendan/Documents/GithubRepos/bootstrap.sass/lib/sass/type.sass, in `font-shorthand'\A         from line 10 of /Users/brendan/Documents/GithubRepos/bootstrap.sass/lib/sass/type.sass\A \A 5: \A 6: // BODY TEXT\A 7: // ---------\A 8: \A 9: p \A 10:    @include font-shorthand(normal,$basefont,$baseline)\A 11:    margin-bottom: $baseline / 2\A 12:    small \A 13:       font-size: $basefont - 2\A 14:       color: $grayLight\A 15:   "; }
+  white-space: pre-wrap;
+  word-wrap: break-word; }
